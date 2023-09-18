@@ -17,7 +17,7 @@ The policy assumes that you used the rpm from Grafana to install it. Thus all th
 ## Installation
 ```sh
 # Clone the repo
-git clone https://github.com/georou/grafana-selinux.git
+git clone https://github.com/performancecopilot/grafana-selinux.git
 
 # Copy relevant .if interface file to /usr/share/selinux/devel/include to expose them when building and for future modules.
 # May need to use full path for grafana.if if not working.
@@ -36,8 +36,7 @@ restorecon -RvF /usr/sbin/grafana-* \
 		/etc/grafana \
 		/var/log/grafana \
 		/var/lib/grafana \
-		/usr/share/performancecopilot-pcp-app \
-		/usr/share/grafana/bin
+		/usr/share/performancecopilot-pcp-app
 
 # Start grafana
 systemctl start grafana-server.service
